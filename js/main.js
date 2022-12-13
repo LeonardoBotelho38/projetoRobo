@@ -66,3 +66,30 @@ function atualizaEstatisticas(peca){
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
     })
 }
+
+let img = document.querySelector('#robotron')
+
+let imagens = document.querySelectorAll('div.imagensRobo >img')
+
+let contador = 0
+
+document.querySelector('#robotron').addEventListener('click', trocaImagem)
+
+function trocaImagem(){
+    if(contador<imagens.length)
+    var itemAtual = imagens[contador]
+
+    img.src = itemAtual.src
+
+   contador++
+   
+   zeraContador()
+}
+
+function zeraContador(){
+    if (contador >=6){
+        contador = 0
+    }
+}
+
+

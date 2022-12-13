@@ -209,6 +209,10 @@ main {
     margin: 10px 0 0;
 }
 
+.imagensRobo{
+    display: none;
+}
+
 @media screen and (max-width: 1600px) {
     body { 
         font-size: 14px;
