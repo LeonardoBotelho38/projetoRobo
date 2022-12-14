@@ -40,6 +40,7 @@ const pecas = {
     }
 }
 
+//identificador de click no controle de peças
 controle.forEach((elemento) => {
     elemento.addEventListener('click', (evento) => {
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode)
@@ -48,7 +49,7 @@ controle.forEach((elemento) => {
     })
 })
 
-
+//função para somar ou subtrair valor de peças
 function manipulaDados(operacao, controle){
     const peca = controle.querySelector('[data-contador]')
 
@@ -59,6 +60,7 @@ function manipulaDados(operacao, controle){
     }
 }
 
+//função para auteral estatistica do robotron a partir do valor das peças
 function atualizaEstatisticas(peca){
    
     estatisticas.forEach((elemento) =>{
@@ -73,8 +75,10 @@ let imagens = document.querySelectorAll('div.imagensRobo >img')
 
 let contador = 0
 
+//identificador de click na imagem do robotron
 document.querySelector('#robotron').addEventListener('click', trocaImagem)
 
+//função que troca imagem do robotron
 function trocaImagem(){
     if(contador<imagens.length)
     var itemAtual = imagens[contador]
@@ -85,7 +89,7 @@ function trocaImagem(){
    
    zeraContador()
 }
-
+//função para voltar as imagens do robotron quando chegar na ultima
 function zeraContador(){
     if (contador >=6){
         contador = 0
